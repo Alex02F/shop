@@ -1,0 +1,92 @@
+<!DOCTYPE html/a
+<html lang="ru">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skladknig - книжный онлайн-магазин</title>
+  <link rel="icon" type="image/png" href="../img/icons/favicon.png">
+  <link rel="stylesheet" type="text/css" rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+  <div id="header">
+    <div class="header__content width">
+	  <div class="header__left">
+	    <a class="header__item" href="../index.html#catalog">🠔 Все товары</a>
+	  </div>
+	  <a class="header__logo" href="">SKLADKNIG</a>
+	  <div class="header__right">
+	  </div>
+	</div>
+	<div class="header__content_mobile width">
+	  <div class="header__mobile">
+	    <a href="../index.html#catalog"><img class="header__mobile_item" src="../img/arrow-left.png"></img></a>
+	  </div>
+	</div>
+  </div>
+  <div id="content">
+    <div class="bookitem width">
+	  <img class="bookitem__img" src="../img/books/6.png" alt="book"></img>
+	  <div class="bookitem__info">
+	    <p class="bookitem__name">Месяц за Рубиконом</p>
+		<p class="bookitem__author">Сергей Лукьяненко</p>
+		<div class="bookitem__price">
+		  <p class="bookitem__pricenow">707 руб.</p>
+		  <p class="bookitem__priceold">786 руб.</p>
+		</div>
+		<div class="bookitem__add" onclick="showBuy()">Добавить в корзину</div>
+		<div class="bookitem__moreinfo">
+		  <p class="bookitem__moretext_hd">Аннотация к книге</p>
+		  <p class="bookitem__moretext">Вот уже восемь лет Земля - колония Инсеков, чужой могущественной цивилизации. Но правда, открывшаяся Максиму Воронцову, еще тяжелее - Земля никогда не была свободной. Теперь он вынужден покинуть родную планету и скрываться среди Измененных, бывших людей, ставших солдатами Инсеков.</p>
+		  <p class="bookitem__moretext">Ему надо понять, для чего Инсеки ведут бесконечные войны с Прежними. Узнать, что такое Смыслы, которые они собирают как дань с захваченных планет. И найти возможность избавить Землю от вечного рабства - потому что лишь так он сможет вернуть свою любовь.</p>
+		  <p class="bookitem__moretext">Но как же жесток этот путь! И что, если лекарство окажется опаснее болезни?</p>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <div id="buy">
+    <div class="buy__content">
+	  <div class="buy__head">
+	    <p class="buy__header">Ваш заказ:</p>
+		<div onclick="hideBuy()"><img class="buy__close" src="../img/close.png" alt="close"></img></div>
+	  </div>
+	  <div class="buy__book">
+	    <img class="buy__book_img" src="../img/books/6.png" alt="book"></img>
+		<div class="buy__book_info">
+		  <p class="buy__book_name">Месяц за Рубиконом</p>
+		  <p class="buy__book_author">Сергей Лукьяненко</p>
+		</div>
+		<p class="buy__book_price">707 р.</p>
+	  </div>
+	  <div class="buy__data">
+	    <div class="buy__data_block">
+		  <p class="buy__data_name">Ваше имя</p>
+		  <input type="text" id="inputsmth" name="name" placeholder="Андрей Андреевич">
+		</div>
+		<div class="buy__data_block">
+		  <p class="buy__data_name">Ваша электронная почта</p>
+		  <input type="text" id="inputsmth" name="name" placeholder="email@example.com">
+		</div>
+		<div class="buy__data_block">
+		  <p class="buy__data_name">Ваш телефон</p>
+		  <input type="text" id="inputsmth" name="name" placeholder="+7 123 456 78 90">
+		</div>
+	  </div>
+	  <div id="buybutton" onclick="getBook()">Оформить заказ</div>
+	</div>
+  </div>
+</body>
+<script>
+  function showBuy() {
+	var x = document.getElementById("buy");
+    x.style.display = "flex";
+  };
+  function hideBuy() {
+	var x = document.getElementById("buy");
+    x.style.display = "none";
+  };
+  function getBook() {
+	var b = document.getElementById("buybutton");
+	b.textContent = "Заказ оформлен";
+  };
+</script>
+</html>

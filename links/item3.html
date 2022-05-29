@@ -1,0 +1,91 @@
+<!DOCTYPE html/a
+<html lang="ru">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skladknig - книжный онлайн-магазин</title>
+  <link rel="icon" type="image/png" href="../img/icons/favicon.png">
+  <link rel="stylesheet" type="text/css" rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+  <div id="header">
+    <div class="header__content width">
+	  <div class="header__left">
+	    <a class="header__item" href="../index.html#catalog">🠔 Все товары</a>
+	  </div>
+	  <a class="header__logo" href="">SKLADKNIG</a>
+	  <div class="header__right">
+	  </div>
+	</div>
+	<div class="header__content_mobile width">
+	  <div class="header__mobile">
+	    <a href="../index.html#catalog"><img class="header__mobile_item" src="../img/arrow-left.png"></img></a>
+	  </div>
+	</div>
+  </div>
+  <div id="content">
+    <div class="bookitem width">
+	  <img class="bookitem__img" src="../img/books/3.png" alt="book"></img>
+	  <div class="bookitem__info">
+	    <p class="bookitem__name">Петтерсы. Дети океанов</p>
+		<p class="bookitem__author">Павел Воля</p>
+		<div class="bookitem__price">
+		  <p class="bookitem__pricenow">1393 руб..</p>
+		  <p class="bookitem__priceold">1786 руб.</p>
+		</div>
+		<div class="bookitem__add" onclick="showBuy()">Добавить в корзину</div>
+		<div class="bookitem__moreinfo">
+		  <p class="bookitem__moretext_hd">Аннотация к книге</p>
+		  <p class="bookitem__moretext">Завораживающая сказка Павла Воли для бесстрашных искателей приключений. Мама Майкла и Эшли уезжает в Полинезию, чтобы изучать местную флору и фауну. Их родной город Пензанс перестает казаться домом - ведь дом там, где семья. Решившись оставить друзей, школу, работу и холодный Туманный Альбион, дети вместе с отцом отправляются на поиски мамы, чтобы снова стать неразлучными. С поднятыми парусами они мчатся по ветру навстречу приключениям - и кто знает, что приготовили для них коварные океанские воды!</p>
+		  <p class="bookitem__moretext">В создании книги большое участие приняла семья Павла Воли: жена Ляйсан, дети Роберт и София. Все началось со сказки, которую пара рассказывала дочери и сыну на ночь. Каждый раз история наполнялась новыми подробностями, поворотами сюжета и персонажами. </p>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <div id="buy">
+    <div class="buy__content">
+	  <div class="buy__head">
+	    <p class="buy__header">Ваш заказ:</p>
+		<div onclick="hideBuy()"><img class="buy__close" src="../img/close.png" alt="close"></img></div>
+	  </div>
+	  <div class="buy__book">
+	    <img class="buy__book_img" src="../img/books/3.png" alt="book"></img>
+		<div class="buy__book_info">
+		  <p class="buy__book_name">Петтерсы. Дети океанов</p>
+		  <p class="buy__book_author">Павел Воля</p>
+		</div>
+		<p class="buy__book_price">1393 р.</p>
+	  </div>
+	  <div class="buy__data">
+	    <div class="buy__data_block">
+		  <p class="buy__data_name">Ваше имя</p>
+		  <input type="text" id="inputsmth" name="name" placeholder="Андрей Андреевич">
+		</div>
+		<div class="buy__data_block">
+		  <p class="buy__data_name">Ваша электронная почта</p>
+		  <input type="text" id="inputsmth" name="name" placeholder="email@example.com">
+		</div>
+		<div class="buy__data_block">
+		  <p class="buy__data_name">Ваш телефон</p>
+		  <input type="text" id="inputsmth" name="name" placeholder="+7 123 456 78 90">
+		</div>
+	  </div>
+	  <div id="buybutton" onclick="getBook()">Оформить заказ</div>
+	</div>
+  </div>
+</body>
+<script>
+  function showBuy() {
+	var x = document.getElementById("buy");
+    x.style.display = "flex";
+  };
+  function hideBuy() {
+	var x = document.getElementById("buy");
+    x.style.display = "none";
+  };
+  function getBook() {
+	var b = document.getElementById("buybutton");
+	b.textContent = "Заказ оформлен";
+  };
+</script>
+</html>
